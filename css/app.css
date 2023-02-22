@@ -3,3 +3,59 @@
     padding: 0;
     margin: 0;
 }
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+.debug{
+    border: 2px dotted green;
+}
+
+.background{
+    height: 100vh;
+    background: linear-gradient(0deg, #d7dbd6 85%, #009688 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userinterface{
+    width: 1700px;
+    height: 1100px;
+    background-color: white;
+}
+
+.userinterface-header,
+.userinterface-body{
+    width: 100%;
+    display: flex;
+}
+
+.userinterface-header{
+    height: 98px;
+    background-color: #eaeaea;
+}
+
+.userinterface-body{
+    height: calc(100% - 98px);
+}
+
+.col{
+    height: 100%;
+}
+
+.col-4{
+    flex-basis: calc( (100% / 12) * 4 );
+}
+
+.col-8{
+    flex-basis: calc( (100% / 12) * 8 );
+}
+
+.notification-banner{
+    height: 100px;
+    background-color: #8edafc;
+}
