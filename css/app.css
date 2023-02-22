@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
 }
 
 ol,
@@ -10,11 +11,24 @@ menu {
     list-style: none;
 }
 
-.debug{
-    border: 2px dotted green;
+button,
+input {
+    background-color: white;
+    border: none;
 }
 
-.background{
+img {
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+/* .debug{
+    border: 2px dotted green;
+} */
+
+.background {
     height: 100vh;
     background: linear-gradient(0deg, #d7dbd6 85%, #009688 60%);
     display: flex;
@@ -22,40 +36,139 @@ menu {
     align-items: center;
 }
 
-.userinterface{
+.userinterface {
     width: 1700px;
     height: 1100px;
     background-color: white;
+    overflow: hidden;
 }
 
 .userinterface-header,
-.userinterface-body{
+.userinterface-body {
     width: 100%;
     display: flex;
 }
 
-.userinterface-header{
+.userinterface-header {
     height: 98px;
     background-color: #eaeaea;
 }
 
-.userinterface-body{
+.userinterface-body {
     height: calc(100% - 98px);
 }
 
-.col{
+.col {
     height: 100%;
 }
 
-.col-4{
-    flex-basis: calc( (100% / 12) * 4 );
+.col-4 {
+    flex-basis: calc((100% / 12) * 4);
+    border-right: 1px solid #dcd3cc;
 }
 
-.col-8{
-    flex-basis: calc( (100% / 12) * 8 );
+.col-8 {
+    flex-basis: calc((100% / 12) * 8);
 }
 
-.notification-banner{
+.user-contact {
+    height: 100%;
+    font-size: 24px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info ul {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-tool-list {
+    display: flex;
+    gap: 15px;
+    opacity: 0.3;
+}
+
+.notification-banner {
     height: 100px;
+    padding: 25px;
     background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-banner ul li:first-child {
+    font-weight: bold;
+}
+
+.notification-banner ul li:last-child {
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+
+.notification-banner i {
+    color: #8edafc;
+    background-color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 35px;
+    aspect-ratio: 1;
+    line-height: 30px;
+}
+
+.searchbar {
+    padding: 15px;
+    background-color: #fafafae8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar-button,
+.searchbar-text {
+    height: 30px;
+    border: 1px solid #dcd3cc;
+}
+
+.searchbar-button {
+    width: 50px;
+}
+
+.searchbar-button i {
+    opacity: 0.5;
+}
+
+.searchbar-text {
+    width: calc(100% - 50px);
+}
+
+.contacts-list{
+    overflow-y: scroll;
+}
+
+.contacts-list-item{
+    height: 100%;
+    font-size: 24px;
+    padding: 10px;
+    gap: 15px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-bottom: 1px solid #dcd3cc;
+}
+
+.contacts-list-item p:first-child{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contacts-list-item p:last-child{
+    font-weight: lighter;
+    font-size: 12px;
+    opacity: 0.7;
 }
