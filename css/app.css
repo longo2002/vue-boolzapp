@@ -71,7 +71,8 @@ img {
     flex-basis: calc((100% / 12) * 8);
 }
 
-.user-contact {
+.user-contact,
+.contact-contact {
     height: 100%;
     font-size: 24px;
     padding: 25px;
@@ -80,7 +81,8 @@ img {
     align-items: center;
 }
 
-.user-info ul {
+.user-info ul,
+.contact-info ul{
     display: flex;
     gap: 15px;
     align-items: center;
@@ -168,6 +170,12 @@ img {
 }
 
 .contacts-list-item p:last-child{
+    font-weight: lighter;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.contact-info ul p:last-child{
     font-weight: lighter;
     font-size: 12px;
     opacity: 0.7;
