@@ -1,4 +1,5 @@
 console.log("works!")
+
 const contacts = [
     {
         name: 'Michele',
@@ -161,4 +162,5 @@ const contacts = [
         ],
     }
 ]
+
 console.log(contacts)

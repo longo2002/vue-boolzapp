@@ -146,6 +146,7 @@ img {
 }
 
 .searchbar-text {
+    padding: 10px;
     width: calc(100% - 50px);
 }
 
@@ -176,6 +177,66 @@ img {
 }
 
 .contact-info ul p:last-child{
+    font-weight: lighter;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.text-area{
+    height: calc( 100% - 100px);
+    background-image: url("../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    padding: 50px;
+}
+
+.typing-area{
+    height: 100px;
+    padding: 25px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.typing-area i {
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+.typingbar{
+    padding: 10px;
+    width: 90%;
+}
+
+.user-text-sent,
+.contact-text-sent{
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px; 
+}
+
+.user-text-sent{
+    margin-left: 70%;
+    margin-bottom: 15px;
+    background-color: #d5f9ba;
+}
+
+.user-text-sent p:last-child{
+    position: relative;
+    top: 15px;
+    left: 230px;
+    font-weight: lighter;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.contact-text-sent{
+    background-color: #ffffff;
+}
+
+.contact-text-sent p:last-child{
+    position: relative;
+    top: 15px;
+    left: 230px;
     font-weight: lighter;
     font-size: 12px;
     opacity: 0.7;
