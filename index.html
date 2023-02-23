@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./css/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ada0ed41be.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <section>
+    <section id="app">
         <div class="background">
             <div class="userinterface debug">
                 <div class="userinterface-header debug">
@@ -92,128 +93,28 @@
                         </div>
                         <div class="contacts-list">
                             <ul>
-                                <li class="contacts-list-item">
+                                <li v-for="contact in contacts" class="contacts-list-item">
                                     <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
+                                        <img :src="contact.avatar" alt="profile_pic">
                                     </div>
                                     <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
+                                        <p>{{ contact.name }}</p>
+                                        <p>Ultimo messaggio inviato</p>
                                     </div>
-                                </li>
-                                
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
-                                </li>
-                                <li class="contacts-list-item">
-                                    <div>
-                                        <img src="./img/user icon.png" alt="profile_pic">
-                                    </div>
-                                    <div>
-                                        <p>Contact</p>
-                                        <p>Messaggio inviato</p>
-                                    </div>
+                                    <span class="last-seen">16:00</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col col-8 debug ">
                         <div class="text-area">
-                            <div class="user-text">
-                                <div class="user-text-sent">
-                                    <p>
-                                        Hai portato a spasso il cane?
-                                    </p>
-                                    <p>
-                                        16:00
-                                    </p>
-                                </div>
-                                <div class="user-text-sent">
-                                    <p>
-                                        Ricorda di stendere i panni.
-                                    </p>
-                                    <p>
-                                        16:00
-                                    </p>
-                                </div>
+                            <div v-for="messages in contacts" class="user-text-sent">
+                                <p>
+                                    {{messages.message}}
+                                </p>
+                                <p>
+                                    {{messages.date}}
+                                </p>
                             </div>
                             <div class="contact-text">
                                 <div class="contact-text-sent">
