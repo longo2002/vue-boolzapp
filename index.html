@@ -48,10 +48,10 @@
                             <div class="contact-info">
                                 <ul>
                                     <li>
-                                        <img src="./img/user icon.png" alt="profile_pic">
+                                        <img :src="contacts[currentIndex].avatar" alt="profile_pic">
                                     </li>
                                     <li>
-                                        <p>Contact</p>
+                                        <p>{{ contacts[currentIndex].name }}</p>
                                         <p>Ultimo accesso oggi alle 12:40</p>
                                     </li>
                                 </ul>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="contacts-list">
                             <ul>
-                                <li v-for="contact in contacts" class="contacts-list-item">
+                                <li v-for="(contact,index) in contacts" @click="contactDisplay(index)" class="contacts-list-item">
                                     <div>
                                         <img :src="contact.avatar" alt="profile_pic">
                                     </div>
@@ -108,12 +108,12 @@
                     </div>
                     <div class="col col-8 debug ">
                         <div class="text-area">
-                            <div v-for="message in contacts[0].messages" class="user-text-sent">
+                            <div class="user-text-sent">
                                 <p>
-                                    {{contacts[0].messages[0].message}}
+                                    Scendi il cane, pls.
                                 </p>
                                 <p>
-                                    {{contacts[0].messages[0].date}}
+                                    16:00
                                 </p>
                             </div>
                             <div class="contact-text">

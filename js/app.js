@@ -171,8 +171,13 @@ createApp({
 	data() {
 		return {
 			contacts: contacts,
+            currentIndex: 0,
 		}
 	},
     methods: {
+        contactDisplay(index){
+            this.currentIndex = index,
+            console.log("click")
+        }
 	},
 }).mount('#app')
