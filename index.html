@@ -108,12 +108,12 @@
                     </div>
                     <div class="col col-8 debug ">
                         <div class="text-area">
-                            <div v-for="messages in contacts" class="user-text-sent">
+                            <div v-for="message in contacts[0].messages" class="user-text-sent">
                                 <p>
-                                    {{messages.message}}
+                                    {{contacts[0].messages[0].message}}
                                 </p>
                                 <p>
-                                    {{messages.date}}
+                                    {{contacts[0].messages[0].date}}
                                 </p>
                             </div>
                             <div class="contact-text">

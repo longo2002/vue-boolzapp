@@ -171,7 +171,6 @@ createApp({
 	data() {
 		return {
 			contacts: contacts,
-            messagePrint: ""
 		}
 	},
     methods: {
