@@ -93,7 +93,8 @@
                         </div>
                         <div class="contacts-list">
                             <ul>
-                                <li v-for="(contact,index) in contacts" @click="contactDisplay(index)" class="contacts-list-item">
+                                <li v-for="(contact,index) in contacts" @click="contactDisplay(index)"
+                                    class="contacts-list-item">
                                     <div>
                                         <img :src="contact.avatar" alt="profile_pic">
                                     </div>
@@ -108,24 +109,13 @@
                     </div>
                     <div class="col col-8 debug ">
                         <div class="text-area">
-                            <div class="user-text-sent">
-                                <p>
-                                    Scendi il cane, pls.
-                                </p>
-                                <p>
-                                    16:00
-                                </p>
-                            </div>
-                            <div class="contact-text">
-                                <div class="contact-text-sent">
-                                    <p>
-                                        Tutto fatto!
-                                    </p>
-                                    <p>
-                                        16:00
-                                    </p>
-                                </div>
-                            </div>
+                            <p v-for="(message, messageIndex ,index) in contacts[currentIndex].messages"
+                                :class="message.status === 'sent' ? 'user-text-sent' : 'contact-text-sent' ">
+                                {{contacts[currentIndex].messages[messageIndex].message}}
+                            </p>
+                            <!-- <p>
+                                16:00
+                            </p> -->
                         </div>
                         <div class="typing-area">
                             <i class="fa-regular fa-face-smile"></i>

@@ -172,6 +172,7 @@ createApp({
 		return {
 			contacts: contacts,
             currentIndex: 0,
+            messageIndex: 0,
 		}
 	},
     methods: {
