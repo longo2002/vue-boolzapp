@@ -89,7 +89,7 @@
                             <button class="searchbar-button">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="searchbar-text">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="searchbar-text" v-model="srcValue"  @keyup.enter="searchContactFunction">
                         </div>
                         <div class="contacts-list">
                             <ul>
