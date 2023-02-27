@@ -24,10 +24,6 @@ img {
     aspect-ratio: 1;
 }
 
-/* .debug{
-    border: 2px dotted green;
-} */
-
 .background {
     height: 100vh;
     background: linear-gradient(0deg, #d7dbd6 85%, #009688 60%);

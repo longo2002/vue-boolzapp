@@ -173,12 +173,40 @@ createApp({
 			contacts: contacts,
             currentIndex: 0,
             messageIndex: 0,
+            msgValue: "",
+            msgReplayValue: "Ok!",
 		}
 	},
     methods: {
         contactDisplay(index){
             this.currentIndex = index,
             console.log("click")
-        }
+        },
+        autoReply(){
+            const msgReplayDisplay = {
+                text: this.msgReplayValue,
+                status: "recived",
+            }
+
+            this.contacts[this.currentIndex].messages.push(msgReplayDisplay)
+        },
+        sendingMessages(){
+            let msgSent = this.msgValue.trim()
+
+            if (msgSent === '') {
+				this.msgValue = ''
+				return
+			}
+
+            const msgSentDisplay = {
+                text: msgSent,
+                status: "sent",
+            }
+
+            this.contacts[this.currentIndex].messages.push(msgSentDisplay)
+            this.msgValue = ""
+
+            setTimeout(this.autoReply, 1000)
+        },
 	},
 }).mount('#app')

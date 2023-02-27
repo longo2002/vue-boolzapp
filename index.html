@@ -113,13 +113,10 @@
                                 :class="message.status === 'sent' ? 'user-text-sent' : 'contact-text-sent' ">
                                 {{contacts[currentIndex].messages[messageIndex].message}}
                             </p>
-                            <!-- <p>
-                                16:00
-                            </p> -->
                         </div>
                         <div class="typing-area">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input type="text" placeholder="Scrivi messaggio..." class="typingbar">
+                            <input type="text" placeholder="Scrivi messaggio..." class="typingbar" v-model="msgValue" @keyup.enter="sendingMessages">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>
