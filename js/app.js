@@ -192,7 +192,7 @@ createApp({
 			}
 
             const msgSentDisplay = {
-                text: msgSent,
+                message: msgSent,
                 status: "sent",
             }
 
@@ -203,7 +203,7 @@ createApp({
         },
         autoReply(){
             const msgReplayDisplay = {
-                text: this.msgReplayValue,
+                message: this.msgReplayValue,
                 status: "recived",
             }
 
